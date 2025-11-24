@@ -103,7 +103,7 @@
         /* --- Hero Section --- */
         .hero {
             height: 90vh;
-            /* 変更点：参考画像に近い雰囲気のWeb上の夜景画像を使用 */
+            /* ヒーロー画像URLを修正 */
             background: linear-gradient(rgba(11, 19, 43, 0.4), rgba(11, 19, 43, 0.6)), url('https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&q=80') center/cover;
             display: flex;
             align-items: center;
@@ -330,6 +330,27 @@
         .footer-col ul li { margin-bottom: 10px; }
         .footer-col ul li a:hover { color: var(--white); }
 
+        /* --- Chart Area (新しいセクションとして追加) --- */
+        .chart-area {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--bg-gray);
+            margin-bottom: 100px;
+            border-radius: 8px;
+        }
+        .chart-area h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        .chart-area img {
+            max-width: 80%;
+            height: auto;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.2rem; }
             .partner-grid { grid-template-columns: 1fr; }
@@ -337,6 +358,8 @@
             .footer-grid { grid-template-columns: 1fr; }
             .stats-grid { flex-direction: column; gap: 30px; }
             .nav-menu { display: none; }
+            /* アクセスセクションのグリッドもモバイル向けに修正 */
+            #access > .container > div { grid-template-columns: 1fr !important; } 
         }
     </style>
 </head>
@@ -380,12 +403,17 @@
             </div>
             <div class="philosophy-text">
                 <p>
-                    複雑化する現代社会において、法律事務所に求められる役割は「紛争の解決」だけではありません。私たちは、技術（Technology）、財務（Finance）、そして法律（Law）の3つの視点を融合させ、クライアントのビジネスを前進させる戦略的パートナーでありたいと考えています。<br>
+                    複雑化する現代社会において、法律事務所に求められる役割は「紛争の解決」だけではありません。私たちは、**技術（Technology）、財務（Finance）、そして法律（Law）の3つの視点**を融合させ、クライアントのビジネスを前進させる戦略的パートナーでありたいと考えています。<br>
                     虎ノ門ヒルズを拠点に、総勢100名のプロフェッショナルが、国境や領域を超えた最適解を提供します。
                 </p>
             </div>
         </div>
     </section>
+    
+    <div class="container chart-area">
+        <h3>成長の軌跡（2032年 独立〜2040年）</h3>
+        <img src="https://via.placeholder.com/1200x400?text=Business+Growth+Chart+(2032-2040)+Placeholder" alt="2032年から2040年までの顧問数と売上、営業利益の棒グラフ">
+    </div>
     
     <div class="stats-section">
         <div class="container stats-grid">
@@ -441,7 +469,7 @@
                             <span class="timeline-content">都内大手法律事務所 入所</span>
                         </div>
                         <div class="timeline-item">
-                            <span class="timeline-year">現在</span>
+                            <span class="timeline-year">2032年 1月</span>
                             <span class="timeline-content">中嶋法律事務所 開設 代表パートナー就任</span>
                         </div>
                     </div>
@@ -604,7 +632,7 @@
                     <a href="#" style="display:inline-block; margin-top:20px; color:var(--primary-color); font-weight:bold; border-bottom:1px solid;">Google Mapで見る</a>
                 </div>
                 <div style="background:#ddd; min-height:300px; display:flex; align-items:center; justify-content:center; color:#666;">
-                    Google Map Placeholder
+                    <img src="https://via.placeholder.com/600x300?text=Google+Map+Embed+Placeholder" alt="Google Map Placeholder">
                 </div>
             </div>
         </div>
