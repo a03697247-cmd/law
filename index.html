@@ -103,8 +103,8 @@
         /* --- Hero Section --- */
         .hero {
             height: 90vh;
-            /* 変更点：参考画像に近い雰囲気のWeb上の夜景画像を使用 */
-            background: linear-gradient(rgba(11, 19, 43, 0.4), rgba(11, 19, 43, 0.6)), url('https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&q=80') center/cover;
+            /* 修正点：東京・虎ノ門周辺の夜景画像 */
+            background: linear-gradient(rgba(11, 19, 43, 0.5), rgba(11, 19, 43, 0.7)), url('https://images.unsplash.com/photo-1540893809618-b2a4c1b97b10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNTkyOTN8MHwxfHNlYXJjaHw0fHxUa3lvJTIwbmVpaWdodCUyMG9mZmljZSUyMGJ1aWxkaW5nfGVufDB8MHx8fDE3MDAzNzI1NDl8MA&ixlib=rb-4.0.3&q=80&w=1080') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -329,6 +329,27 @@
         .footer-col h4 { color: var(--white); margin-bottom: 20px; }
         .footer-col ul li { margin-bottom: 10px; }
         .footer-col ul li a:hover { color: var(--white); }
+        
+        /* --- Chart Area --- */
+        .chart-area {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--bg-gray);
+            margin-bottom: 100px;
+            border-radius: 8px;
+        }
+        .chart-area h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        .chart-area img {
+            max-width: 80%;
+            height: auto;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
 
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.2rem; }
@@ -337,6 +358,8 @@
             .footer-grid { grid-template-columns: 1fr; }
             .stats-grid { flex-direction: column; gap: 30px; }
             .nav-menu { display: none; }
+            #access > .container > div { grid-template-columns: 1fr !important; }
+            .chart-area img { max-width: 100%; }
         }
     </style>
 </head>
@@ -387,6 +410,11 @@
         </div>
     </section>
     
+    <div class="container chart-area">
+        <h3>成長の軌跡（2032年 独立〜2040年）</h3>
+        
+    </div>
+
     <div class="stats-section">
         <div class="container stats-grid">
             <div class="stat-item">
@@ -412,7 +440,7 @@
             </div>
 
             <div class="partner-grid">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" alt="代表弁護士 中嶋遥陽" class="rep-image">
+                <img src="https://images.unsplash.com/photo-1599566150163-4882490ab8d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNTkyOTN8MHwxfHNlYXJjaHw3fHlvdW5nJTIwSmFwYW5lc2UlMjBtYWxlJTIwcHJvZmVzc2lvbmFsfGVufDB8MHx8fDE3MDAzNzI3MTd8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="代表弁護士 中嶋遥陽" class="rep-image">
                 <div class="rep-info">
                     <span class="rep-title">代表パートナー弁護士 / 公認会計士</span>
                     <h3>中嶋 遥陽</h3>
@@ -441,7 +469,7 @@
                             <span class="timeline-content">都内大手法律事務所 入所</span>
                         </div>
                         <div class="timeline-item">
-                            <span class="timeline-year">現在</span>
+                            <span class="timeline-year">2032年 1月</span>
                             <span class="timeline-content">中嶋法律事務所 開設 代表パートナー就任</span>
                         </div>
                     </div>
