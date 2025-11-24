@@ -103,8 +103,8 @@
         /* --- Hero Section --- */
         .hero {
             height: 90vh;
-            /* 修正点：東京・虎ノ門周辺の夜景画像 */
-            background: linear-gradient(rgba(11, 19, 43, 0.5), rgba(11, 19, 43, 0.7)), url('https://images.unsplash.com/photo-1540893809618-b2a4c1b97b10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNTkyOTN8MHwxfHNlYXJjaHw0fHxUa3lvJTIwbmVpaWdodCUyMG9mZmljZSUyMGJ1aWxkaW5nfGVufDB8MHx8fDE3MDAzNzI1NDl8MA&ixlib=rb-4.0.3&q=80&w=1080') center/cover;
+            /* 背景画像は画像生成モデルで作成します */
+            background: linear-gradient(rgba(11, 19, 43, 0.5), rgba(11, 19, 43, 0.7)), var(--hero-background-image) center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -381,7 +381,7 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" style="--hero-background-image: url('https://images.unsplash.com/photo-1540893809618-b2a4c1b97b10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNTkyOTN8MHwxfHNlYXJjaHw0fHxUa3lvJTIwbmVpaWdodCUyMG9mZmljZSUyMGJ1aWxkaW5nfGVufDB8MHx8fDE3MDAzNzI1NDl8MA&ixlib=rb-4.0.3&q=80&w=1080');">
         <div class="container hero-content">
             <h1>Go Beyond the Law.</h1>
             <p>理系×会計×法務。100名超の専門家集団が<br>ビジネスの「解」を導き出す。</p>
@@ -440,7 +440,7 @@
             </div>
 
             <div class="partner-grid">
-                <img src="https://images.unsplash.com/photo-1599566150163-4882490ab8d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNTkyOTN8MHwxfHNlYXJjaHw3fHlvdW5nJTIwSmFwYW5lc2UlMjBtYWxlJTIwcHJvZmVzc2lvbmFsfGVufDB8MHx8fDE3MDAzNzI3MTd8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="代表弁護士 中嶋遥陽" class="rep-image">
+                
                 <div class="rep-info">
                     <span class="rep-title">代表パートナー弁護士 / 公認会計士</span>
                     <h3>中嶋 遥陽</h3>
@@ -537,7 +537,7 @@
                         <span class="lawyer-name">山下 智久</span><span class="lawyer-name">横山 裕</span><span class="lawyer-name">渡辺 謙</span><span class="lawyer-name">青山 剛昌</span>
                         <span class="lawyer-name">赤井 秀一</span><span class="lawyer-name">安室 透</span><span class="lawyer-name">服部 平次</span><span class="lawyer-name">遠山 和葉</span>
                         <span class="lawyer-name">毛利 蘭</span><span class="lawyer-name">灰原 哀</span><span class="lawyer-name">阿笠 博士</span><span class="lawyer-name">目暮 十三</span>
-                        <span class="lawyer-name">高木 渉</span><span class="lawyer-name">佐藤 美和子</span><span class="lawyer-name">白鳥 任三郎</span><span class="lawyer-name">千葉 和伸</span>
+                        <span class="lawyer-name">高木 渉</span><span class="lawyer-name">佐藤 美和子</span><span class="lawер-name">白鳥 任三郎</span><span class="lawyer-name">千葉 和伸</span>
                         <span class="lawyer-name">宮本 由美</span><span class="lawyer-name">三池 苗子</span><span class="lawyer-name">ジョディ S</span><span class="lawyer-name">キャメル A</span>
                         <span class="lawyer-name">水無 怜奈</span><span class="lawyer-name">本堂 瑛祐</span><span class="lawyer-name">世良 真純</span><span class="lawyer-name">沖矢 昴</span>
                         <span style="color:#999; margin-top:10px;">他 60名</span>
