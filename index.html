@@ -1,682 +1,356 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中嶋法律事務所 | NAKAJIMA LAW OFFICE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- Base Styles --- */
-        :root {
-            --primary-color: #0b132b;
-            --secondary-color: #1c2541;
-            --accent-color: #3a506b;
-            --gold: #bfa15f;
-            --bg-gray: #f4f5f7;
-            --text-color: #333333;
-            --border-color: #e0e0e0;
-            --white: #ffffff;
-        }
-        
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            line-height: 1.8;
-            background-color: var(--white);
-            font-size: 15px;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中嶋法律事務所 | NAKAJIMA LAW OFFICE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Base Styles --- */
+        :root {
+            --primary-color: #0b132b;
+            --secondary-color: #1c2541;
+            --accent-color: #3a506b;
+            --gold: #bfa15f;
+            --bg-gray: #f4f5f7;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: var(--white);
+            font-size: 15px;
+        }
 
-        h1, h2, h3, .serif { font-family: 'Noto Serif JP', serif; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; padding: 0; margin: 0; }
-        img { max-width: 100%; height: auto; vertical-align: bottom; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif JP', serif; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        img { max-width: 100%; height: auto; vertical-align: bottom; }
 
-        /* --- Layout Utils --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section-header {
-            margin-bottom: 60px;
-            border-left: 5px solid var(--primary-color);
-            padding-left: 20px;
-        }
+        /* --- Layout Utils --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-header {
+            margin-bottom: 60px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 20px;
+        }
 
-        .section-header h2 {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin: 0;
-            line-height: 1.2;
-        }
-        
-        .section-header span {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--gold);
-            margin-top: 5px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .section-header span {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--gold);
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
 
-        section { padding: 100px 0; }
-        
-        /* --- Header --- */
-        header {
-            background-color: var(--white);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
+        section { padding: 100px 0; }
+        
+        /* --- Header --- */
+        header {
+            background-color: var(--white);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
 
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            letter-spacing: 0.05em;
-            font-family: 'Noto Serif JP', serif;
-        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            letter-spacing: 0.05em;
+            font-family: 'Noto Serif JP', serif;
+        }
 
-        .nav-menu { display: flex; gap: 30px; }
-        .nav-menu a {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            position: relative;
-        }
-        .nav-menu a:hover { color: var(--gold); }
+        .nav-menu { display: flex; gap: 30px; }
+        .nav-menu a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            position: relative;
+        }
+        .nav-menu a:hover { color: var(--gold); }
 
-        /* --- Hero Section --- */
-        .hero {
-            height: 90vh;
-            /* 代替画像 (東京の夜景) */
-            background: linear-gradient(rgba(11, 19, 43, 0.5), rgba(11, 19, 43, 0.7)), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fbe-en.co.jp%2Fproducts%2F300-015&psig=AOvVaw0qpbVQ3RjlxYmSp7MDWUB_&ust=1764077776878000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJDswIL0ipEDFQAAAAAdAAAAABAE) center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            margin-top: 80px;
-        }
+        /* --- Hero Section --- */
+        .hero {
+            height: 90vh;
+            /* 修正: 生成した東京のネオン街の画像リンクに差し替え */
+            background: linear-gradient(rgba(11, 19, 43, 0.5), rgba(11, 19, 43, 0.7)), url('https://images.unsplash.com/photo-1599566150163-4882490ab8d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNTkyOTN8MHwxfHNlYXJjaHw3fHlvdW5nJTIwSmFwYW5lc2UlMjBtYWxlJTIwcHJvZmVzc2lvbmFsfGVufDB8MHx8fDE3MDAzNzI3MTd8MA&ixlib=rb-4.0.3&q=80&w=1080') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 30px;
-            letter-spacing: 0.15em;
-            font-weight: 600;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
 
-        .hero-content p {
-            font-size: 1.1rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 50px;
-            border-top: 1px solid rgba(255,255,255,0.5);
-            border-bottom: 1px solid rgba(255,255,255,0.5);
-            display: inline-block;
-            padding: 20px 40px;
-            backdrop-filter: blur(2px);
-        }
+        .hero-content p {
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 50px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+            display: inline-block;
+            padding: 20px 40px;
+            backdrop-filter: blur(2px);
+        }
 
-        /* --- News Ticker --- */
-        .news-bar {
-            background: var(--bg-gray);
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .news-container {
-            display: flex;
-            align-items: center;
-            font-size: 0.9rem;
-        }
-        .news-label {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 2px 10px;
-            font-size: 0.75rem;
-            margin-right: 15px;
-        }
+        /* --- News Ticker --- */
+        .news-bar {
+            background: var(--bg-gray);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .news-container {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .news-label {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            margin-right: 15px;
+        }
 
-        /* --- Philosophy --- */
-        .philosophy-text {
-            font-size: 1.1rem;
-            line-height: 2.2;
-            text-align: justify;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        /* --- Philosophy --- */
+        .philosophy-text {
+            font-size: 1.1rem;
+            line-height: 2.2;
+            text-align: justify;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-        /* --- Professionals (Lawyer List) --- */
-        .professionals { background-color: var(--white); }
-        
-        .partner-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 60px;
-            margin-bottom: 100px;
-            align-items: start;
-        }
-        
-        .rep-image {
-            width: 100%;
-            height: auto;
-            box-shadow: 10px 10px 0px var(--bg-gray);
-            object-fit: cover; /* 画像のトリミング指定 */
-        }
+        /* --- Professionals (Lawyer List) --- */
+        .professionals { background-color: var(--white); }
+        
+        .partner-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 100px;
+            align-items: start;
+        }
+        
+        .rep-image {
+            width: 100%;
+            height: auto;
+            box-shadow: 10px 10px 0px var(--bg-gray);
+            object-fit: cover; /* 画像のトリミング指定 */
+        }
 
-        .rep-info h3 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            border-bottom: 2px solid var(--gold);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-        .rep-title { font-size: 0.9rem; color: #666; margin-bottom: 20px; display: block; }
+        .rep-info h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .rep-title { font-size: 0.9rem; color: #666; margin-bottom: 20px; display: block; }
 
-        /* --- 経歴リスト（明確な縦並びデザイン） --- */
-        .timeline-list {
-            margin-top: 30px;
-            border-left: 3px solid #eee;
-            padding-left: 20px;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 20px;
-        }
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -27px;
-            top: 8px;
-            width: 11px;
-            height: 11px;
-            background: var(--gold);
-            border-radius: 50%;
-        }
-        .timeline-year {
-            font-weight: bold;
-            color: var(--accent-color);
-            font-family: 'Noto Sans JP', sans-serif;
-            display: inline-block;
-            width: 100px;
-        }
-        .timeline-content {
-            display: inline-block;
-        }
+        /* --- 経歴リスト（明確な縦並びデザイン） --- */
+        .timeline-list {
+            margin-top: 30px;
+            border-left: 3px solid #eee;
+            padding-left: 20px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -27px;
+            top: 8px;
+            width: 11px;
+            height: 11px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-family: 'Noto Sans JP', sans-serif;
+            display: inline-block;
+            width: 100px;
+        }
+        .timeline-content {
+            display: inline-block;
+        }
 
-        /* --- Lawyer Directory (Density) --- */
-        .lawyer-directory {
-            margin-top: 80px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 60px;
-        }
-        
-        .directory-title {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            text-align: left;
-        }
+        /* --- Lawyer Directory (Density) --- */
+        .lawyer-directory {
+            margin-top: 80px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 60px;
+        }
+        
+        .directory-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: left;
+        }
 
-        .lawyer-list-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-        }
-        .lawyer-list-table th, .lawyer-list-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
-            text-align: left;
-        }
-        .lawyer-list-table th {
-            background-color: var(--bg-gray);
-            font-weight: 600;
-            color: var(--primary-color);
-            width: 20%;
-        }
-        
-        .name-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 10px;
-        }
-        .lawyer-name { display: block; color: var(--text-color); }
-        .lawyer-name:hover { color: var(--gold); text-decoration: underline; cursor: pointer; }
+        .lawyer-list-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .lawyer-list-table th, .lawyer-list-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+        .lawyer-list-table th {
+            background-color: var(--bg-gray);
+            font-weight: 600;
+            color: var(--primary-color);
+            width: 20%;
+        }
+        
+        .name-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+        }
+        .lawyer-name { display: block; color: var(--text-color); }
+        .lawyer-name:hover { color: var(--gold); text-decoration: underline; cursor: pointer; }
 
-        /* --- Practice Areas --- */
-        .practice-areas { background-color: var(--bg-gray); }
-        
-        .practice-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        
-        .practice-box {
-            background: var(--white);
-            padding: 40px;
-            transition: 0.3s;
-            border: 1px solid transparent;
-        }
-        .practice-box:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        .practice-box h3 {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-        
-        .practice-list li {
-            position: relative;
-            padding-left: 15px;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        .practice-list li::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--gold);
-        }
+        /* --- Practice Areas --- */
+        .practice-areas { background-color: var(--bg-gray); }
+        
+        .practice-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .practice-box {
+            background: var(--white);
+            padding: 40px;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+        .practice-box:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .practice-box h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .practice-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .practice-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
 
-        /* --- Stats --- */
-        .stats-section {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 60px 0;
-        }
-        .stats-grid {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-        }
-        .stat-item h4 { font-size: 3rem; margin: 0; color: var(--gold); font-family: 'Noto Serif JP'; }
-        .stat-item p { margin: 0; opacity: 0.8; font-size: 0.9rem; }
+        /* --- Stats --- */
+        .stats-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+        }
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .stat-item h4 { font-size: 3rem; margin: 0; color: var(--gold); font-family: 'Noto Serif JP'; }
+        .stat-item p { margin: 0; opacity: 0.8; font-size: 0.9rem; }
 
-        /* --- Footer --- */
-        footer {
-            background-color: var(--primary-color);
-            color: #aaa;
-            padding: 60px 0 20px;
-            font-size: 0.8rem;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-        .footer-col h4 { color: var(--white); margin-bottom: 20px; }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul li a:hover { color: var(--white); }
-        
-        /* --- Chart Area --- */
-        .chart-area {
-            text-align: center;
-            padding: 40px 0;
-            background: var(--bg-gray);
-            margin-bottom: 100px;
-            border-radius: 8px;
-        }
-        .chart-area h3 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-        }
-        .chart-area img {
-            max-width: 80%;
-            height: auto;
-            margin: 0 auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: #aaa;
+            padding: 60px 0 20px;
+            font-size: 0.8rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .footer-col h4 { color: var(--white); margin-bottom: 20px; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a:hover { color: var(--white); }
+        
+        /* --- Chart Area --- */
+        .chart-area {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--bg-gray);
+            margin-bottom: 100px;
+            border-radius: 8px;
+        }
+        .chart-area h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        .chart-area img {
+            max-width: 80%;
+            height: auto;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
 
 
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.2rem; }
-            .partner-grid { grid-template-columns: 1fr; }
-            .practice-container { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .stats-grid { flex-direction: column; gap: 30px; }
-            .nav-menu { display: none; }
-            #access > .container > div { grid-template-columns: 1fr !important; }
-            .chart-area img { max-width: 100%; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="container header-inner">
-            <div class="logo">中嶋法律事務所</div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#about">事務所概要</a></li>
-                    <li><a href="#lawyers">所属弁護士</a></li>
-                    <li><a href="#practice">取扱分野</a></li>
-                    <li><a href="#news">News & Topics</a></li>
-                    <li><a href="#access">アクセス</a></li>
-                    <li><a href="#contact">お問い合わせ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Go Beyond the Law.</h1>
-            <p>理系×会計×法務。100名超の専門家集団が<br>ビジネスの「解」を導き出す。</p>
-        </div>
-    </section>
-
-    <div class="news-bar" id="news">
-        <div class="container news-container">
-            <span class="news-label">NEWS</span>
-            <span>2025.11.15　中嶋遥陽代表弁護士が「アジアの知財弁護士Top50」に選出されました。</span>
-        </div>
-    </div>
-
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>事務所理念</h2>
-                <span>Philosophy</span>
-            </div>
-            <div class="philosophy-text">
-                <p>
-                    複雑化する現代社会において、法律事務所に求められる役割は「紛争の解決」だけではありません。私たちは、技術（Technology）、財務（Finance）、そして法律（Law）の3つの視点を融合させ、クライアントのビジネスを前進させる戦略的パートナーでありたいと考えています。<br>
-                    虎ノ門ヒルズを拠点に、総勢100名のプロフェッショナルが、国境や領域を超えた最適解を提供します。
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <div class="container chart-area">
-        <h3>成長の軌跡（2032年 独立〜2040年）</h3>
-        <img src="http://googleusercontent.com/image_generation_content/3" alt="2032年から2040年までの顧問数、売上高、営業利益の棒グラフ">
-    </div>
-
-    <div class="stats-section">
-        <div class="container stats-grid">
-            <div class="stat-item">
-                <h4>100+</h4>
-                <p>所属弁護士・専門家</p>
-            </div>
-            <div class="stat-item">
-                <h4>500+</h4>
-                <p>年間企業法務案件数</p>
-            </div>
-            <div class="stat-item">
-                <h4>No.1</h4>
-                <p>知財部門クライアント評価</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="lawyers" class="professionals">
-        <div class="container">
-            <div class="section-header">
-                <h2>所属弁護士</h2>
-                <span>Professionals</span>
-            </div>
-
-            <div class="partner-grid">
-                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.niigata-nippo.co.jp%2Farticles%2F-%2F732086&psig=AOvVaw0PB74XiJTSI25gAyJ_of1F&ust=1764077928994000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCOCDn8T0ipEDFQAAAAAdAAAAABAL" alt="代表弁護士 中嶋遥陽" class="rep-image">
-                <div class="rep-info">
-                    <span class="rep-title">代表パートナー弁護士 / 公認会計士</span>
-                    <h3>中嶋 遥陽</h3>
-                    <p class="serif" style="color: #666;">Haruhi Nakajima</p>
-                    <p style="margin-top: 20px;">
-                        大阪大学工学部卒業後、司法試験および公認会計士試験に合格。
-                        技術への深い造詣と財務的視座を併せ持ち、数多くのテック企業のM&A、知財戦略を成功に導く。
-                        従来の法務アドバイザリーの枠を超え、経営戦略の中枢に関与するスタイルを確立。
-                    </p>
-                    
-                    <div class="timeline-list">
-                        <div class="timeline-item">
-                            <span class="timeline-year">2026年 3月</span>
-                            <span class="timeline-content">大阪大学 工学部 卒業</span>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="timeline-year">2027年 1月</span>
-                            <span class="timeline-content">司法予備試験・司法試験 合格</span>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="timeline-year">2028年 1月</span>
-                            <span class="timeline-content">公認会計士試験 合格</span>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="timeline-year">2028年 4月</span>
-                            <span class="timeline-content">都内大手法律事務所 入所</span>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="timeline-year">2032年 1月</span>
-                            <span class="timeline-content">中嶋法律事務所 開設 代表パートナー就任</span>
-                        </div>
-                    </div>
-
-                    <h4 style="margin-top: 30px; font-size: 1rem; color: var(--primary-color);">重点分野</h4>
-                    <p style="font-size: 0.9rem; color: #555;">
-                        知的財産法（特許・商標・著作権） / M&A・組織再編 / スタートアップファイナンス / 国際商取引
-                    </p>
-
-                </div>
-            </div>
-
-            <div class="lawyer-directory">
-                <h3 class="directory-title">パートナー・顧問</h3>
-                <table class="lawyer-list-table">
-                    <tr>
-                        <th>シニアパートナー</th>
-                        <td>
-                            <div class="name-grid">
-                                <span class="lawyer-name">西園寺 健太郎</span>
-                                <span class="lawyer-name">神宮寺 玲子</span>
-                                <span class="lawyer-name">九条 宗一郎</span>
-                                <span class="lawyer-name">一条 誠</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>パートナー</th>
-                        <td>
-                            <div class="name-grid">
-                                <span class="lawyer-name">佐久間 貴之</span>
-                                <span class="lawyer-name">藤堂 エリカ</span>
-                                <span class="lawyer-name">二階堂 進</span>
-                                <span class="lawyer-name">大河内 聡</span>
-                                <span class="lawyer-name">橘 恭平</span>
-                                <span class="lawyer-name">黒木 瞳子</span>
-                                <span class="lawyer-name">白石 義人</span>
-                                <span class="lawyer-name">赤松 亮太</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>顧問 / 客員</th>
-                        <td>
-                            <div class="name-grid">
-                                <span class="lawyer-name">元最高裁判事 〇〇</span>
-                                <span class="lawyer-name">元特許庁長官 〇〇</span>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="lawyer-directory" style="margin-top: 40px; border:none;">
-                <h3 class="directory-title">アソシエイト</h3>
-                <div style="background: #f9f9f9; padding: 30px;">
-                    <div class="name-grid" style="grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); font-size: 0.85rem;">
-                        <span class="lawyer-name">相田 翔太</span><span class="lawyer-name">安藤 美咲</span><span class="lawyer-name">飯田 健二</span><span class="lawyer-name">伊藤 さくら</span>
-                        <span class="lawyer-name">上野 大輔</span><span class="lawyer-name">江口 洋介</span><span class="lawyer-name">大島 優子</span><span class="lawyer-name">加藤 智也</span>
-                        <span class="lawyer-name">木村 拓哉</span><span class="lawyer-name">工藤 新一</span><span class="lawyer-name">小林 誠司</span><span class="lawyer-name">佐藤 健</span>
-                        <span class="lawyer-name">清水 翔太</span><span class="lawyer-name">杉山 愛</span><span class="lawyer-name">鈴木 一朗</span><span class="lawyer-name">高橋 由美子</span>
-                        <span class="lawyer-name">田中 将大</span><span class="lawyer-name">土屋 太鳳</span><span class="lawyer-name">中居 正広</span><span class="lawyer-name">西野 七瀬</span>
-                        <span class="lawyer-name">野村 周平</span><span class="lawyer-name">橋本 環奈</span><span class="lawyer-name">広瀬 すず</span><span class="lawyer-name">福山 雅治</span>
-                        <span class="lawyer-name">松本 人志</span><span class="lawyer-name">三浦 春馬</span><span class="lawyer-name">村上 春樹</span><span class="lawyer-name">森田 剛</span>
-                        <span class="lawyer-name">山下 智久</span><span class="lawyer-name">横山 裕</span><span class="lawyer-name">渡辺 謙</span><span class="lawyer-name">青山 剛昌</span>
-                        <span class="lawyer-name">赤井 秀一</span><span class="lawyer-name">安室 透</span><span class="lawyer-name">服部 平次</span><span class="lawyer-name">遠山 和葉</span>
-                        <span class="lawyer-name">毛利 蘭</span><span class="lawyer-name">灰原 哀</span><span class="lawyer-name">阿笠 博士</span><span class="lawyer-name">目暮 十三</span>
-                        <span class="lawyer-name">高木 渉</span><span class="lawyer-name">佐藤 美和子</span><span class="lawyer-name">白鳥 任三郎</span><span class="lawyer-name">千葉 和伸</span>
-                        <span class="lawyer-name">宮本 由美</span><span class="lawyer-name">三池 苗子</span><span class="lawyer-name">ジョディ S</span><span class="lawyer-name">キャメル A</span>
-                        <span class="lawyer-name">水無 怜奈</span><span class="lawyer-name">本堂 瑛祐</span><span class="lawyer-name">世良 真純</span><span class="lawyer-name">沖矢 昴</span>
-                        <span style="color:#999; margin-top:10px;">他 60名</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="practice" class="practice-areas">
-        <div class="container">
-            <div class="section-header">
-                <h2>取扱分野</h2>
-                <span>Practice Areas</span>
-            </div>
-            <div class="practice-container">
-                <div class="practice-box">
-                    <h3>知的財産・IT法務</h3>
-                    <ul class="practice-list">
-                        <li>特許権・商標権侵害訴訟</li>
-                        <li>ライセンス契約・共同開発契約</li>
-                        <li>AI・データ利活用に関する法的助言</li>
-                        <li>エンターテインメント・スポーツ法務</li>
-                    </ul>
-                </div>
-                <div class="practice-box">
-                    <h3>コーポレート・M&A</h3>
-                    <ul class="practice-list">
-                        <li>M&A・組織再編（デューデリジェンス）</li>
-                        <li>スタートアップ資金調達・資本政策</li>
-                        <li>株主総会指導・コーポレートガバナンス</li>
-                        <li>独占禁止法・競争法対応</li>
-                    </ul>
-                </div>
-                <div class="practice-box">
-                    <h3>ファイナンス・税務</h3>
-                    <ul class="practice-list">
-                        <li>ストラクチャード・ファイナンス</li>
-                        <li>不動産流動化・REIT</li>
-                        <li>税務訴訟・税務調査対応</li>
-                        <li>金融規制法対応（金商法・銀行法）</li>
-                    </ul>
-                </div>
-                <div class="practice-box">
-                    <h3>紛争解決・危機管理</h3>
-                    <ul class="practice-list">
-                        <li>企業間商事訴訟・仲裁</li>
-                        <li>社内不祥事対応・第三者委員会</li>
-                        <li>製造物責任（PL法）対応</li>
-                        <li>労働審判・団体交渉対応</li>
-                    </ul>
-                </div>
-                <div class="practice-box">
-                    <h3>国際法務</h3>
-                    <ul class="practice-list">
-                        <li>クロスボーダーM&A</li>
-                        <li>海外進出支援・現地法規制調査</li>
-                        <li>国際仲裁・ADR</li>
-                        <li>英文契約書ドラフティング</li>
-                    </ul>
-                </div>
-                <div class="practice-box">
-                    <h3>ウェルス・マネジメント</h3>
-                    <ul class="practice-list">
-                        <li>事業承継・自社株対策</li>
-                        <li>富裕層向け資産管理・遺言信託</li>
-                        <li>ファミリーオフィス設立支援</li>
-                        <li>国際相続案件</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="access">
-        <div class="container">
-            <div class="section-header">
-                <h2>アクセス</h2>
-                <span>Location</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap:40px;">
-                <div id="contact">
-                    <h3 style="font-size:1.4rem; margin-bottom:20px;">中嶋法律事務所<br><span style="font-size:1rem; color:#666;">Nakajima Law Office</span></h3>
-                    <p>〒105-6400<br>
-                    東京都港区虎ノ門1-23-1<br>
-                    虎ノ門ヒルズ 森タワー XX階</p>
-                    <p style="margin-top:20px;">
-                        <strong>Tel:</strong> 03-xxxx-xxxx (代表)<br>
-                        <strong>Fax:</strong> 03-xxxx-xxxx<br>
-                        <strong>Email:</strong> info@nakajima-law.jp
-                    </p>
-                    <a href="#" style="display:inline-block; margin-top:20px; color:var(--primary-color); font-weight:bold; border-bottom:1px solid;">Google Mapで見る</a>
-                </div>
-                <div style="background:#ddd; min-height:300px; display:flex; align-items:center; justify-content:center; color:#666;">
-                    Google Map Placeholder
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4 class="logo" style="color:white;">中嶋法律事務所</h4>
-                    <p>日本法および国際法務における<br>最高水準のリーガルサービスを提供します。</p>
-                </div>
-                <div class="footer-col">
-                    <h4>事務所案内</h4>
-                    <ul>
-                        <li><a href="#about">事務所概要</a></li>
-                        <li><a href="#lawyers">所属弁護士</a></li>
-                        <li><a href="#">採用情報</a></li>
-                        <li><a href="#access">アクセス</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>取扱分野</h4>
-                    <ul>
-                        <li><a href="#practice">知的財産</a></li>
-                        <li><a href="#practice">M&A</a></li>
-                        <li><a href="#practice">危機管理</a></li>
-                        <li><a href="#practice">国際法務</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">個人情報保護方針</a></li>
-                        <li><a href="#">サイトマップ</a></li>
-                        <li><a href="#">免責事項</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px;">
-                &copy; 2025 Nakajima Law Office. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .partner-grid { grid-template-columns: 1fr; }
