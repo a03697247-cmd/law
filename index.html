@@ -103,7 +103,7 @@
         /* --- Hero Section --- */
         .hero {
             height: 90vh;
-            /* ヒーロー画像URLを修正 */
+            /* ヒーロー画像URLを適用 */
             background: linear-gradient(rgba(11, 19, 43, 0.4), rgba(11, 19, 43, 0.6)), url('https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&q=80') center/cover;
             display: flex;
             align-items: center;
@@ -330,7 +330,7 @@
         .footer-col ul li { margin-bottom: 10px; }
         .footer-col ul li a:hover { color: var(--white); }
 
-        /* --- Chart Area (新しいセクションとして追加) --- */
+        /* --- Chart Area (成長の軌跡) --- */
         .chart-area {
             text-align: center;
             padding: 40px 0;
@@ -358,8 +358,8 @@
             .footer-grid { grid-template-columns: 1fr; }
             .stats-grid { flex-direction: column; gap: 30px; }
             .nav-menu { display: none; }
-            /* アクセスセクションのグリッドもモバイル向けに修正 */
             #access > .container > div { grid-template-columns: 1fr !important; } 
+            .chart-area img { max-width: 100%; }
         }
     </style>
 </head>
